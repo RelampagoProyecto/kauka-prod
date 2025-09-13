@@ -3087,6 +3087,7 @@
 
 
 
+
 <script src="/js/home-bundle.js"></script>
 <script>
   
@@ -3131,7 +3132,9 @@
   };
 
   
-  console.log('Home page initialization triggered from template');
+  if (window.Debug && window.KAUKA_CONFIG.debug) {
+    Debug.log("[Template]", "Home page initialization triggered from template");
+  }
 </script> 
 
 

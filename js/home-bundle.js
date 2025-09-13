@@ -1,4 +1,88 @@
 /**
+ * Debug Utility for KAUKA
+ * Provides conditional console logging based on KAUKA_CONFIG.debug setting
+ * Prevents console.log execution in production builds
+ */
+
+/**
+ * Debug logger that only outputs when debug mode is enabled
+ * @param {string} level - Log level: 'log', 'warn', 'error', 'debug', 'info'
+ * @param {string} module - Module name (e.g., '[Home]', '[Gallery]')
+ * @param {...any} args - Arguments to pass to console
+ */
+function debugLog(level, module, ...args) {
+  // Check if KAUKA_CONFIG exists and debug is enabled
+  if (
+    typeof window !== "undefined" &&
+    window.KAUKA_CONFIG &&
+    window.KAUKA_CONFIG.debug === true
+  ) {
+    // Ensure the console method exists
+    if (console && typeof console[level] === "function") {
+      console[level](module, ...args);
+    }
+  }
+}
+
+/**
+ * Debug utility object with different log levels
+ */
+const Debug = {
+  /**
+   * Log informational messages
+   * @param {string} module - Module name
+   * @param {...any} args - Arguments to log
+   */
+  log: (module, ...args) => debugLog("log", module, ...args),
+
+  /**
+   * Log warning messages
+   * @param {string} module - Module name
+   * @param {...any} args - Arguments to log
+   */
+  warn: (module, ...args) => debugLog("warn", module, ...args),
+
+  /**
+   * Log error messages
+   * @param {string} module - Module name
+   * @param {...any} args - Arguments to log
+   */
+  error: (module, ...args) => debugLog("error", module, ...args),
+
+  /**
+   * Log debug messages
+   * @param {string} module - Module name
+   * @param {...any} args - Arguments to log
+   */
+  debug: (module, ...args) => debugLog("debug", module, ...args),
+
+  /**
+   * Log info messages
+   * @param {string} module - Module name
+   * @param {...any} args - Arguments to log
+   */
+  info: (module, ...args) => debugLog("info", module, ...args),
+
+  /**
+   * Check if debug mode is enabled
+   * @returns {boolean} True if debug mode is enabled
+   */
+  isEnabled: () => {
+    return (
+      typeof window !== "undefined" &&
+      window.KAUKA_CONFIG &&
+      window.KAUKA_CONFIG.debug === true
+    );
+  },
+};
+
+// Export for use in other modules
+if (typeof window !== "undefined") {
+  window.Debug = Debug;
+}
+
+;
+/**
  * Breakpoint utilities for responsive behavior
  * Matches Tailwind CSS breakpoints
  */
@@ -98,11 +182,11 @@ function fetchProgramaCuratorial(baseURL = "") {
       return response.json();
     })
     .then((data) => {
-      if (window.KAUKA_DEBUG) console.log("Programa Curatorial data:", data);
+      Debug.log("[API]", "Programa Curatorial data:", data);
       return data;
     })
     .catch((error) => {
-      console.error("Error fetching programa-curatorial data:", error);
+      Debug.error("[API]", "Error fetching programa-curatorial data:", error);
       return [];
     });
 }
@@ -121,12 +205,11 @@ function fetchArtists(baseURL = "") {
       return response.json();
     })
     .then((data) => {
-      if (window.KAUKA_DEBUG)
-        console.log(`Found ${data.length} artists with image galleries`);
+      Debug.log("[API]", `Found ${data.length} artists with image galleries`);
       return data;
     })
     .catch((error) => {
-      console.error("Error fetching artists data:", error);
+      Debug.error("[API]", "Error fetching artists data:", error);
       return [];
     });
 }
@@ -142,11 +225,11 @@ function fetchArtists(baseURL = "") {
  * Waits for the visible image to fully load before calculating position
  */
 function positionSectionBackground() {
-  console.log("[BackgroundPositioner] Starting position calculation");
+  Debug.log("[BackgroundPositioner] Starting position calculation");
 
   // Ensure DOM is ready
   if (document.readyState === "loading") {
-    console.log(
+    Debug.log(
       "[BackgroundPositioner] DOM not ready, waiting for DOMContentLoaded"
     );
     document.addEventListener("DOMContentLoaded", positionSectionBackground);
@@ -160,7 +243,7 @@ function positionSectionBackground() {
   );
 
   if (!homeImg || !sectionBgImg) {
-    console.warn("[BackgroundPositioner] Elements not found:", {
+    Debug.warn("[BackgroundPositioner] Elements not found:", {
       homeImg: !!homeImg,
       sectionBgImg: !!sectionBgImg,
     });
@@ -168,12 +251,12 @@ function positionSectionBackground() {
   }
 
   if (!extraContentSection) {
-    console.warn(
+    Debug.warn(
       "[BackgroundPositioner] Extra content section not found, falling back to simple behavior"
     );
   }
 
-  console.log("[BackgroundPositioner] Found elements:", {
+  Debug.log("[BackgroundPositioner] Found elements:", {
     homeImg,
     sectionBgImg,
     extraContentSection: !!extraContentSection,
@@ -188,7 +271,7 @@ function positionSectionBackground() {
 
   // Function to calculate and set position
   function calculatePosition() {
-    console.log("[BackgroundPositioner] Calculating position...");
+    Debug.log("[BackgroundPositioner] Calculating position...");
 
     // Wait a bit longer for layout to stabilize
     setTimeout(() => {
@@ -196,7 +279,7 @@ function positionSectionBackground() {
       const homeImgBottom = homeImgRect.bottom + window.scrollY;
       const spacer = 12;
 
-      console.log("[BackgroundPositioner] Home image dimensions:", {
+      Debug.log("[BackgroundPositioner] Home image dimensions:", {
         rect: homeImgRect,
         scrollY: window.scrollY,
         calculatedBottom: homeImgBottom,
@@ -207,7 +290,7 @@ function positionSectionBackground() {
       // Double-check by also using offset properties for better accuracy
       const alternativeBottom = homeImg.offsetTop + homeImg.offsetHeight;
 
-      console.log("[BackgroundPositioner] Alternative calculation:", {
+      Debug.log("[BackgroundPositioner] Alternative calculation:", {
         alternativeBottom,
         difference: Math.abs(homeImgBottom - alternativeBottom),
       });
@@ -219,7 +302,7 @@ function positionSectionBackground() {
       const bgComputedStyle = window.getComputedStyle(sectionBgImg);
       const isFixed = bgComputedStyle.position === "fixed";
 
-      console.log("[BackgroundPositioner] Element positioning:", {
+      Debug.log("[BackgroundPositioner] Element positioning:", {
         position: bgComputedStyle.position,
         isFixed: isFixed,
       });
@@ -231,13 +314,13 @@ function positionSectionBackground() {
         const homeImgBottomAtScrollZero =
           homeImg.offsetTop + homeImg.offsetHeight - window.scrollY;
         initialPosition = homeImgBottomAtScrollZero + spacer;
-        console.log(
+        Debug.log(
           `[BackgroundPositioner] Fixed element initial position (corrected for scroll): ${initialPosition}px`
         );
       } else {
         // For absolute/relative positioning, use document coordinates (not affected by scroll)
         initialPosition = finalBottom + spacer;
-        console.log(
+        Debug.log(
           `[BackgroundPositioner] Absolute element initial position: ${initialPosition}px`
         );
       }
@@ -254,7 +337,7 @@ function positionSectionBackground() {
           extraContentRect.bottom > 0;
 
         if (isExtraContentVisible) {
-          console.log(
+          Debug.log(
             "[BackgroundPositioner] Extra content visible on load, starting to follow immediately"
           );
           isFollowingScroll = true;
@@ -267,7 +350,7 @@ function positionSectionBackground() {
               sectionBgImg.getBoundingClientRect().height;
             const topPosition = extraContentTopViewport - bgImageHeight;
             sectionBgImg.style.top = `${topPosition}px`;
-            console.log(
+            Debug.log(
               `[BackgroundPositioner] Initial position updated to follow (fixed): ${topPosition}px`
             );
           } else {
@@ -277,7 +360,7 @@ function positionSectionBackground() {
               sectionBgImg.getBoundingClientRect().height;
             const topPosition = extraContentTopInDocument - bgImageHeight;
             sectionBgImg.style.top = `${topPosition}px`;
-            console.log(
+            Debug.log(
               `[BackgroundPositioner] Initial position updated to follow (absolute): ${topPosition}px`
             );
           }
@@ -287,13 +370,13 @@ function positionSectionBackground() {
       // Show the background image with smooth fade-in
       sectionBgImg.style.opacity = "1";
 
-      console.log(
+      Debug.log(
         `[BackgroundPositioner] Section background positioned and made visible at: ${initialPosition}px`
       );
 
       // Verify the styles were applied
       const computedStyle = window.getComputedStyle(sectionBgImg);
-      console.log("[BackgroundPositioner] Applied styles:", {
+      Debug.log("[BackgroundPositioner] Applied styles:", {
         top: sectionBgImg.style.top,
         opacity: sectionBgImg.style.opacity,
         computedTop: computedStyle.top,
@@ -307,7 +390,7 @@ function positionSectionBackground() {
       }
 
       window.backgroundPositionerResize = function () {
-        console.log(
+        Debug.log(
           "[BackgroundPositioner] Window resized, recalculating position"
         );
         // Recalculate with a small delay to let layout settle
@@ -345,7 +428,7 @@ function positionSectionBackground() {
                   sectionBgImg.getBoundingClientRect().height;
                 const topPosition = extraContentTopViewport - bgImageHeight;
                 sectionBgImg.style.top = `${topPosition}px`;
-                console.log(
+                Debug.log(
                   `[BackgroundPositioner] Resize - following extra content (fixed): ${topPosition}px`
                 );
               } else {
@@ -355,7 +438,7 @@ function positionSectionBackground() {
                   sectionBgImg.getBoundingClientRect().height;
                 const topPosition = extraContentTopInDocument - bgImageHeight;
                 sectionBgImg.style.top = `${topPosition}px`;
-                console.log(
+                Debug.log(
                   `[BackgroundPositioner] Resize - following extra content (absolute): ${topPosition}px`
                 );
               }
@@ -364,7 +447,7 @@ function positionSectionBackground() {
               // Extra content not visible - use initial position
               sectionBgImg.style.top = `${initialPosition}px`;
               isFollowingScroll = false;
-              console.log(
+              Debug.log(
                 `[BackgroundPositioner] Resize - reset to initial position: ${initialPosition}px`
               );
             }
@@ -374,7 +457,7 @@ function positionSectionBackground() {
             isFollowingScroll = false;
           }
 
-          console.log("[BackgroundPositioner] Resize recalculation complete:", {
+          Debug.log("[BackgroundPositioner] Resize recalculation complete:", {
             initialPosition,
             isFollowingScroll,
           });
@@ -406,7 +489,7 @@ function positionSectionBackground() {
                 extraContentRect.top < viewportHeight + visibilityOffset &&
                 extraContentRect.bottom > 0;
 
-              console.log("[BackgroundPositioner] Viewport visibility check:", {
+              Debug.log("[BackgroundPositioner] Viewport visibility check:", {
                 extraContentTop: extraContentRect.top,
                 extraContentBottom: extraContentRect.bottom,
                 viewportHeight,
@@ -430,7 +513,7 @@ function positionSectionBackground() {
 
                   sectionBgImg.style.top = `${topPosition}px`;
 
-                  console.log(
+                  Debug.log(
                     "[BackgroundPositioner] Following extra content (fixed):",
                     {
                       extraContentTopViewport,
@@ -448,7 +531,7 @@ function positionSectionBackground() {
 
                   sectionBgImg.style.top = `${topPosition}px`;
 
-                  console.log(
+                  Debug.log(
                     "[BackgroundPositioner] Following extra content (absolute):",
                     {
                       extraContentTopInDocument,
@@ -460,7 +543,7 @@ function positionSectionBackground() {
 
                 if (!isFollowingScroll) {
                   isFollowingScroll = true;
-                  console.log(
+                  Debug.log(
                     "[BackgroundPositioner] Started following - extra content is visible"
                   );
                 }
@@ -469,7 +552,7 @@ function positionSectionBackground() {
                 if (isFollowingScroll) {
                   sectionBgImg.style.top = `${initialPosition}px`;
                   isFollowingScroll = false;
-                  console.log(
+                  Debug.log(
                     "[BackgroundPositioner] Stopped following - extra content not visible, reset to initial position:",
                     initialPosition
                   );
@@ -493,15 +576,15 @@ function positionSectionBackground() {
 
   if (!visibleImg) {
     // No visible image found, calculate immediately
-    console.log(
+    Debug.log(
       "[BackgroundPositioner] No visible image found, calculating position immediately"
     );
     calculatePosition();
     return;
   }
 
-  console.log(`[BackgroundPositioner] Found visible image: ${visibleImg.src}`);
-  console.log("[BackgroundPositioner] Image details:", {
+  Debug.log(`[BackgroundPositioner] Found visible image: ${visibleImg.src}`);
+  Debug.log("[BackgroundPositioner] Image details:", {
     complete: visibleImg.complete,
     naturalHeight: visibleImg.naturalHeight,
     naturalWidth: visibleImg.naturalWidth,
@@ -510,7 +593,7 @@ function positionSectionBackground() {
 
   // Check if isImageLoaded function is available
   if (typeof isImageLoaded !== "function") {
-    console.warn(
+    Debug.warn(
       "[BackgroundPositioner] isImageLoaded function not available, using fallback logic"
     );
     // Fallback: assume image is loaded if it's complete and has dimensions
@@ -518,18 +601,18 @@ function positionSectionBackground() {
       visibleImg.complete &&
       (visibleImg.naturalHeight > 0 || visibleImg.src.includes(".svg"))
     ) {
-      console.log(
+      Debug.log(
         "[BackgroundPositioner] Image appears loaded (fallback check), calculating position"
       );
       // Use longer delay for SVGs in fallback mode too
       const delay = visibleImg.src.includes(".svg") ? 200 : 50;
       setTimeout(calculatePosition, delay);
     } else {
-      console.log(
+      Debug.log(
         "[BackgroundPositioner] Image not loaded (fallback check), waiting for load event"
       );
       const onLoad = function () {
-        console.log("[BackgroundPositioner] Image load event fired");
+        Debug.log("[BackgroundPositioner] Image load event fired");
         setTimeout(calculatePosition, 50);
         visibleImg.removeEventListener("load", onLoad);
         visibleImg.removeEventListener("error", onLoad);
@@ -544,21 +627,21 @@ function positionSectionBackground() {
   // For SVG images, wait a bit longer for layout to stabilize
   // For other images, check if they're loaded
   if (visibleImg.src.includes(".svg")) {
-    console.log(
+    Debug.log(
       "[BackgroundPositioner] SVG image found, waiting for layout stabilization"
     );
     // Use a longer timeout for SVGs to ensure the layout is stable
     setTimeout(calculatePosition, 200);
   } else if (isImageLoaded(visibleImg)) {
-    console.log(
+    Debug.log(
       "[BackgroundPositioner] Regular image already loaded, calculating position"
     );
     setTimeout(calculatePosition, 50);
   } else {
-    console.log("[BackgroundPositioner] Waiting for image to load...");
+    Debug.log("[BackgroundPositioner] Waiting for image to load...");
     // Wait for the image to load
     const onLoad = function () {
-      console.log(
+      Debug.log(
         "[BackgroundPositioner] Visible image loaded, calculating position"
       );
       setTimeout(calculatePosition, 50);
@@ -581,25 +664,22 @@ function positionSectionBackground() {
  * Initialize all home page functionality
  */
 function initHomePage() {
-  console.log("[Home] Initializing home page functionality");
-
-  // Set debug mode
-  window.KAUKA_DEBUG = true;
+  Debug.log("[Home]", "Initializing home page functionality");
 
   // Populate dynamic background images if image data is available
   if (window.KAUKA_CONFIG && window.KAUKA_CONFIG.componenteUno) {
-    console.log("[Home] Populating dynamic background images");
+    Debug.log("[Home]", "Populating dynamic background images");
 
     if (typeof getRandomImage === "function") {
       getRandomImage(window.KAUKA_CONFIG.componenteUno, "section-img-one");
       getRandomImage(window.KAUKA_CONFIG.componenteDos, "section-img-two");
       getRandomImage(window.KAUKA_CONFIG.componenteTres, "section-img-three");
-      console.log("[Home] Dynamic images populated");
+      Debug.log("[Home]", "Dynamic images populated");
     } else {
-      console.warn("[Home] getRandomImage function not available");
+      Debug.warn("[Home]", "getRandomImage function not available");
     }
   } else {
-    console.warn("[Home] Image configuration not available in KAUKA_CONFIG");
+    Debug.warn("[Home]", "Image configuration not available in KAUKA_CONFIG");
   }
 
   // Initialize horizontal scroll
@@ -643,19 +723,19 @@ function initHomePage() {
   if (typeof positionSectionBackground === "function") {
     positionSectionBackground();
 
-    console.log("[Home] Background positioning initialized");
+    Debug.log("[Home]", "Background positioning initialized");
   } else {
-    console.warn("[Home] positionSectionBackground function not available");
+    Debug.warn("[Home]", "positionSectionBackground function not available");
   }
 
   // Initialize project showcase
   // if (typeof initProjectShowcase === "function") {
   //   initProjectShowcase();
   // } else {
-  //   console.warn("[Home] initProjectShowcase function not available");
+  //   Debug.warn("[Home]", "initProjectShowcase function not available");
   // }
 
-  console.log("[Home] Home page initialization complete");
+  Debug.log("[Home]", "Home page initialization complete");
 }
 
 // Initialize when DOM is ready
