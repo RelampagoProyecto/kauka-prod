@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Expositivo Expandido on KAUKA</title>
+    <link>https://relampagoproyecto.github.io/kauka/componentes/expositivo-expandido/</link>
+    <description>Recent content in Expositivo Expandido on KAUKA</description>
+    <generator>Hugo</generator>
+    <language>es-co</language>
+    <lastBuildDate>Sat, 16 Aug 2025 10:37:31 +0000</lastBuildDate>
+    <atom:link href="https://relampagoproyecto.github.io/kauka/componentes/expositivo-expandido/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proyecto Ipsum</title>
+      <link>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/cuarta-exposicion/</link>
+      <pubDate>Thu, 07 Aug 2025 19:37:20 +0000</pubDate>
+      <guid>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/cuarta-exposicion/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proyecto Ipsum</title>
+      <link>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/primera-exposicion/</link>
+      <pubDate>Thu, 07 Aug 2025 19:37:20 +0000</pubDate>
+      <guid>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/primera-exposicion/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proyecto Ipsum</title>
+      <link>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/tercera-exposicion/</link>
+      <pubDate>Thu, 07 Aug 2025 19:37:20 +0000</pubDate>
+      <guid>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/tercera-exposicion/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proyecto Ipsum 2</title>
+      <link>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/segunda-exposicion/</link>
+      <pubDate>Thu, 07 Aug 2025 19:37:20 +0000</pubDate>
+      <guid>https://relampagoproyecto.github.io/kauka/programa-curatorial/expositivo-expandido/segunda-exposicion/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

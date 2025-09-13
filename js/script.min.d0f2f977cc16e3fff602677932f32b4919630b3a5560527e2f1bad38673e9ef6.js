@@ -1,0 +1,1 @@
+(function(){"use strict";const e=document.querySelectorAll(".nav-dropdown");e.forEach(e=>{e?.addEventListener("click",e=>{e.target.closest(".navbar-item").classList.toggle("active")})})})()
