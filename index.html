@@ -76,8 +76,8 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
          </div>
          <div class="clearfix grpelem" id="u16247"><!-- group -->
           <div class="pointer_cursor clearfix grpelem" id="u16102"><!-- group -->
-           <a class="block shared_content" href="https://drive.google.com/file/d/1Khwijzg-Ok7pJafMj5v9rwDZWMwhRkpA/view?usp=drivesdk" data-content-guid="u16102_0_content"><!-- Block link tag --></a>
-           <a class="nonblock nontext clearfix grpelem shared_content" id="u16111-7" href="https://drive.google.com/file/d/1Khwijzg-Ok7pJafMj5v9rwDZWMwhRkpA/view?usp=drivesdk" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-content-guid="u16111-7_content"><!-- content --><p id="u16111-4">DESCARGAR LA PROGRAMACIÓN<br/>DE LOS ENCUENTROS DE MUNDOS POSIBLES</p><p>&nbsp;</p></a>
+           <a class="block shared_content" href="https://drive.google.com/file/d/1OoF5gZFw7zkrFoVAIfcKbLjEz3GoawoX/view?usp=drivesdk" data-content-guid="u16102_0_content"><!-- Block link tag --></a>
+           <a class="nonblock nontext clearfix grpelem shared_content" id="u16111-7" href="https://drive.google.com/file/d/1OoF5gZFw7zkrFoVAIfcKbLjEz3GoawoX/view?usp=drivesdk" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-content-guid="u16111-7_content"><!-- content --><p id="u16111-4">DESCARGAR LA PROGRAMACIÓN<br/>DE LOS ENCUENTROS DE MUNDOS POSIBLES</p><p>&nbsp;</p></a>
           </div>
          </div>
          <div class="clearfix grpelem shared_content" id="u381-5" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-content-guid="u381-5_content"><!-- content -->
@@ -1827,7 +1827,8 @@ Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.resizeHeight('.browser_width');/* resize height */
 Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 (function(){
-	try{
+
+	try{
 
 $(document).ready(function(){pic=new Image();pic.src="Add File";if(8==1){document.getElementById('bgmu').innerHTML="<li><a href='./index.html' target='_self'>Kauka</a></li>"}
 else if(8==2){document.getElementById('bgmu').innerHTML="<li><a href='./index.html' target='_self'>Kauka</a></li><li><a href='./expositivo-expandido.html' target='_self'>Expositivo expandido</a></li>"}
@@ -1852,12 +1853,18 @@ if(0==1){$(".buttonopen").hover(function(){$(this).css("background-image","url(A
 if(0==1){var open=TweenLite.to(".buttonopen",0.5,{rotation:360,ease:Expo.easeNone,transformOrigin:'50% 50%'});open.pause();$('.buttonopen').on("mouseenter",function(){open.play()}).on("mouseleave",function(){open.reverse()})}
 if(1==1){var close=TweenLite.to(".overlay-close",0.5,{rotation:360,ease:Power1.easeOut,transformOrigin:'50% 50%'});close.pause();$('.overlay-close').on("mouseenter",function(){close.play()}).on("mouseleave",function(){close.reverse()})}})})
 
-	}
-	catch(e)
-	{
-		Muse.Assert.fail('Error with Widget:BIG Menu - Little Boxes (2.6) ParamHTMLOnDocReady Handler ' + e.toString());
-	}
-})();/* Widget:BIG Menu - Little Boxes (2.6) */
+
+	}
+
+	catch(e)
+
+	{
+
+		Muse.Assert.fail('Error with Widget:BIG Menu - Little Boxes (2.6) ParamHTMLOnDocReady Handler ' + e.toString());
+
+	}
+
+})();/* Widget:BIG Menu - Little Boxes (2.6) */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 $( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
