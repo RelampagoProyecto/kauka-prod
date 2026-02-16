@@ -22,6 +22,9 @@
 
 
 
+
+  
+
 <meta name="pagefind:weight" content="1" />
 
 
@@ -200,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4022,10 +4025,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4081,7 +4096,7 @@ if (typeof initHeaderOnReady === "function") {
 
 
 
-    <main class="">
+    <main class="" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   <div
@@ -6599,6 +6614,835 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
         
         
         
+
+        
+        
+        
+          
+        
+        
+
+        
+          
+          <section class="project-list-project-container">
+            <a
+              href="https://47sna.com/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/"
+              class="project-list-project-link"
+              aria-label="Ver actividad: Fiesta popular en el centro de Popayán">
+              <div class="project-list-project">
+                <div class="project-list-media-frame">
+                  
+                    <div class="project-list-image-slider swiper">
+                      <div class="swiper-wrapper">
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-01_hu_b7a01ec473eb7d.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-01_hu_b7a01ec473eb7d.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-01_hu_a1483f8673e0ab02.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-01_hu_cf68b6a49125ca3c.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-01_hu_eab28027794ff067.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1757" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-02_hu_b62adeaa1b92708e.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-02_hu_b62adeaa1b92708e.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-02_hu_bce7b40e8efe1e95.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-02_hu_4ae6d92a419cd6a6.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-02_hu_549dfdcdd6002d5b.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1600" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-03_hu_af729f2960980a7.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-03_hu_af729f2960980a7.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-03_hu_318fb55f2738e41c.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-03_hu_b569bb9577c8a49f.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-03_hu_5b307a51cae3abc1.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1600" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-04_hu_811111a0f1258608.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-04_hu_811111a0f1258608.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-04_hu_9d1e7a6dff051925.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-04_hu_5c08287def40b41e.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-04_hu_80b34285890c701f.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1668" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-05_hu_664da01e8cae3243.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-05_hu_664da01e8cae3243.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-05_hu_ab7658e6e6e43e41.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-05_hu_f2c9fb7ab1eafa15.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-05_hu_a71dbef6810d36b1.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1507" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                          <div class="swiper-slide">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-06_hu_3e7900652d94a21f.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-06_hu_3e7900652d94a21f.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-06_hu_84c6e2877a33a0a8.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-06_hu_431b550afa3f2541.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/galeria/viv_fiesta-popular-en-el-centro-de-popayan-06_hu_17fae60442fd52a.webp"
+            class=" project-list-image img"
+            alt="Fiesta popular en el centro de Popayán"
+            width="2400"
+            height="1600" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </div>
+                        
+                      </div>
+                    </div>
+                  
+                </div>
+
+                <div class="project-list-info-container">
+                  <div class="project-list-info-diamond">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      <img
+        src="/images/programa-curatorial/pc-project-diamond.svg"
+        loading="lazy"
+        decoding="async"
+        alt=""
+        class=" img"
+        width=""
+        height="" />
+    
+    
+  
+
+
+  
+
+
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+            <div class="project-list-title">
+              <span class="">
+                <a href="https://47sna.com/programa-curatorial/vivencial/fiesta-popular-en-el-centro-de-popayan/" class="project-list-link">
+                  Fiesta popular en el centro de Popayán
+                </a>
+              </span>
+            </div>
+          </section>
+        
+      
+        
+        
+        
           
         
 
@@ -7208,7 +8052,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
             <a
               href="https://47sna.com/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/"
               class="project-list-project-link"
-              aria-label="Ver actividad: Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio">
+              aria-label="Ver actividad: Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio">
               <div class="project-list-project">
                 <div class="project-list-media-frame">
                   
@@ -7317,7 +8161,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-01_hu_6e6b3a4b55b95669.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="2408" />
         </picture>
@@ -7435,7 +8279,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-02_hu_98e874dc7fca0cc5.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="2722" />
         </picture>
@@ -7553,7 +8397,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-03_hu_306a3838452fd473.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="2221" />
         </picture>
@@ -7671,7 +8515,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-04_hu_619d5d0f81f2cfe1.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="1609" />
         </picture>
@@ -7789,7 +8633,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-05_hu_fdda88fc55cfda31.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="2647" />
         </picture>
@@ -7907,7 +8751,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
               loading="lazy" decoding="async"
               src="/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/galeria/enc_popayan-25-secuestro-cultural-06_hu_4aae8729f77316f0.webp"
             class=" project-list-image img"
-            alt="Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio"
+            alt="Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio"
             width="2400"
             height="3324" />
         </picture>
@@ -8013,7 +8857,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
             <div class="project-list-title">
               <span class="">
                 <a href="https://47sna.com/encuentros-de-mundos-posibles/popayan-25-secuestro-cultural/" class="project-list-link">
-                  Secuestro cultural por la dignidad caucana: Nuyxisa Lechekwe, un gobierno chiquito, propio
+                  Secuestro cultural por la dignidad caucana Nuyxisa Lechekwe. Un gobierno chiquito, propio
                 </a>
               </span>
             </div>
@@ -24148,22 +24992,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
         
       
       
-        
-  <div class="project-list-project-container bg-vivencial project-list-extra-md-only">
-    <div class="project-list-diamond bg-vivencial project-list-extra-md-only"></div>
-  </div>
-
       
-      
-      
-        
-        
-          
-  <div class="project-list-project-container bg-vivencial project-list-extra-lg-up">
-    <div class="project-list-diamond bg-vivencial project-list-extra-lg-up"></div>
-  </div>
-
-        
       
     </div>
   </div>
@@ -24208,6 +25037,17 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
   
   <footer class="home-footer-wrapper programa-footer">
     
+
+
+
+
+  
+    
+  
+  
+    
+  
+
 
 
 
@@ -24587,7 +25427,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
         loading="lazy"
         decoding="async"
         alt=""
-        class="home-footer-visual-image sm:hidden img"
+        class="home-footer-visual-image home-footer-visual-image-mobile-all sm:hidden img"
         width=""
         height="" />
     
@@ -24662,7 +25502,7 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
         loading="lazy"
         decoding="async"
         alt=""
-        class="home-footer-visual-image hidden sm:block lg:hidden img"
+        class="home-footer-visual-image home-footer-visual-image-mobile-sm hidden sm:block lg:hidden img"
         width=""
         height="" />
     
@@ -24682,8 +25522,13 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
   </div>
 </div>
 
-<div class="home-footer-logos bg-vivencial">
-  <div class="home-footer-image-container">
+
+
+  </footer>
+
+      </section>
+    </main>
+
     
 
 
@@ -24691,49 +25536,13 @@ Un ejercicio de reconocimiento de la palabra y la acción comunitaria como semil
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <img
-    loading=""
-    decoding="async"
-    src="https://47sna.com/img/footer/footer.png"
-    alt=""
-    class="home-footer-image img"
-    height=""
-    width="" />
-
-
-  </div>
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
 </div>
 
-  </footer>
-
-      </section>
-    </main>
 
     
     

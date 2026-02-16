@@ -22,9 +22,10 @@
 
 
 
+
   
 
-<meta name="pagefind:weight" content="10" />
+<meta name="pagefind:weight" content="5" />
 
 
 
@@ -200,8 +201,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4022,10 +4023,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4081,7 +4094,7 @@ if (typeof initHeaderOnReady === "function") {
 
 
 
-    <main class="">
+    <main class="" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   
@@ -4786,6 +4799,22 @@ if (typeof initHeaderOnReady === "function") {
   
   
 
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
 
   <div class="artista-info-wrapper artista-term-info-wrapper">
     
@@ -4803,7 +4832,7 @@ if (typeof initHeaderOnReady === "function") {
 
     
     
-      <div class="artista-term-content">
+      <div class="artista-term-content invitadx-rich-content">
         <p>Artista del oriente de Cali, cuyo trabajo está atravesado por realidades sociales que hacen parte de su entorno inmediato, centrándose en reflexiones y cuestionamientos sobre la representación de la marginalidad y las identidades que la habitan.</p>
 <p>Recientemente realizó su primera exposición individual en el Museo de Arte Moderno de Medellín. Ha participado en exposiciones colectivas en espacios como el Museo La Tertulia, Cali; la Galería Santa Fe, Bogotá; Espacio Odeón, Bogotá; el Museo Rayo, Roldanillo y el Museo de Antioquia, Medellín. Ha sido merecedor de diferentes reconocimientos como el Premio programa C arte digital, Reconocimiento Nacional XVII Salones Regionales de Artistas del Ministerio de Cultura, y Premio Artecámara en alianza con El Tiempo, ArtBo (2019(. Su obra hace parte de las colecciones del Banco de la República, el Museo La Tertulia y el Museo Rayo.</p>
 
@@ -4856,6 +4885,8 @@ if (typeof initHeaderOnReady === "function") {
   
 
   
+
+  
   
 
   
@@ -4869,7 +4900,7 @@ if (typeof initHeaderOnReady === "function") {
   artista-term-proyectos">
 
   <div class="artista-term-proyectos-arrow">↘</div>
-  <div class="artista-term-proyectos-list">
+  <div class="artista-term-proyectos-list" data-pagefind-ignore>
     
     
     
@@ -4897,79 +4928,6 @@ if (typeof initHeaderOnReady === "function") {
     
       
       
-        
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-      
-      
       
       
     
@@ -5073,6 +5031,94 @@ if (typeof initHeaderOnReady === "function") {
     
       
       
+        
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
       
       
     
@@ -5184,15 +5230,15 @@ if (typeof initHeaderOnReady === "function") {
     
       
       
+        
+      
+      
+        
+      
+      
       
       
     
-      
-      
-        
-      
-      
-        
       
       
         
@@ -5289,6 +5335,25 @@ if (typeof initHeaderOnReady === "function") {
 
       </section>
     </main>
+
+    
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+    <p>Johan Samboní</p>
+
+    
+  
+</div>
+
 
     
     

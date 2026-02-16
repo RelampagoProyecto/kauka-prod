@@ -22,7 +22,10 @@
 
 
 
-<meta name="pagefind:weight" content="1" />
+
+  
+
+<meta name="pagefind:weight" content="12" />
 
 
 
@@ -200,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4024,10 +4027,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4086,20 +4101,15 @@ if (typeof initHeaderOnReady === "function") {
     <main class="
   
   bg-white
-">
+" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   
 
 
   
-  <div
-    class="proyecto-categorias-container bg-burnt-orange">
-    <div id="proyecto-categorias" class="proyecto-categorias">
-      
-      
-    </div>
-  </div>
+  
+
 
   
   <div class="proyecto-titulo-container">
@@ -4111,11 +4121,25 @@ if (typeof initHeaderOnReady === "function") {
   </div>
 
   
-  <div class="proyecto-contenido-container">
-    <div
-      id="proyecto-contenido"
-      class="proyecto-contenido text-deep-pink">
-      <div class="page-content-container ">
+  
+  
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  
+  
+  
+    <div class="proyecto-contenido-container">
+      <div
+        id="proyecto-contenido"
+        class="proyecto-contenido text-deep-pink">
+        <div class="page-content-container ">
   <div class="page-content-text"><p align="right"><em>"La oscuridad del monte ahuyentó a los esclavistas."</em><br>Diane Palacios</p>
 <p align="right"><em>"¡Soy un cimarrón y me voy pa'l monte!"</em><br>Canción de Robe L Ninho</p>
 <p>Monte Oscuro se ubica en el fértil valle del río Cauca, en el norte de lo que en la actualidad se conoce como departamento del Cauca. Se formó cerca de la confluencia de los ríos Palo y Paila, un espacio geográfico al que hoy en día se le llama Puerto Tejada. La tradición oral y los estudios históricos indican que el antiguo palenque ocupaba específicamente las áreas rurales que ahora llevan los nombres de veredas Vuelta Larga y Bocas del Palo, en la periferia de Puerto Tejada. Esta localización estratégica, en medio de la espesura de un monte húmedo tropical, ofrecía un refugio natural: la densa vegetación y la oscuridad del bosque, que servían de barrera frente a incursiones enemigas, y dieron origen al nombre &ldquo;Monte Oscuro&rdquo;.</p>
@@ -4130,10 +4154,13 @@ Escanografías y cerámica
 <p>La obra revela prácticas de magia amorosa registradas en archivos inquisitoriales coloniales que provocaban aversión, rechazo o ruptura de vínculos afectivos. A través de conjuros, amuletos, rezos y untos (ungüentos) elaborados con hierbas, papel y objetos cotidianos, estas prácticas rituales se convirtieron en estrategias de resistencia empleadas por mujeres africanas y afrodescendientes en contextos de violencia, dominación y abuso. En la Cartagena de Indias del siglo XVII (al igual que en zonas rurales del Caribe) muchas esclavizadas recurrieron a estos &ldquo;conjuros de mal querer&rdquo; como medio para protegerse de amos y agresores; buscaban, por ejemplo, que un hombre las aborreciera o perdiera el deseo por ellas, rompiendo así la dinámica de sometimiento. En un mundo que las cosificaba y las subordinaba a la voluntad ajena, la práctica de la magia les ofreció no solo defensa personal, sino también un modo de subvertir las jerarquías coloniales.</p>
 <p>La obra fue realizada mediante escanografía, una técnica que consiste en digitalizar objetos directamente sobre un escáner, capturando sus detalles y texturas sin mediación fotográfica. Los objetos fueron seleccionados a partir de distintos conjuros, y cada imagen corresponde a uno diferente. Dispuestos sobre un fondo negro, los elementos parecen flotar, envueltos en un aura de misterio que remite a la alquimia, al rito y a la palabra como formas de subversión, a los saberes perseguidos por el orden colonial y a las estrategias con las que las mujeres negras protegieron y reclamaron que el deseo y el cuerpo no son dominios colonizados, sino territorios de autonomía. Allí donde el poder colonial buscó poseer y disciplinar, el conjuro aparece como un gesto poético y radical, un lenguaje político capaz de desarticular la lógica de la dominación desde lo invisible.</p>
 <p><strong>Presencias humanas:</strong><br>
+<br />
 Joyce Rivas.</p>
 <p><strong>Presencias más que humanas:</strong><br>
+<br />
 Plantas, raíces, flores, aceites, mantos, piedras, agua bendita, santos, espíritus y deidades africanas que se manifiestan en cada conjuro.</p>
 <p><strong>Territorios:</strong><br>
+<br />
 Caribe colonial.</p>
 <p>Colonias españolas: Cuba, La Española (parte oriental de la actual República Dominicana), Puerto Rico, Jamaica, Trinidad, Islas Caimán, Costa Caribe de la Nueva Granada (Cartagena, Santa Marta, Riohacha, Darién), Costa Caribe de Venezuela (Coro, Maracaibo, Cumaná), Yucatán, Honduras, Nicaragua y Costa Rica.</p>
 <p>Colonias francesas: Haití (Saint-Domingue), Martinica, Guadalupe, Santa Lucía, otras Antillas Menores.</p>
@@ -4159,11 +4186,14 @@ Instalación <br>
 <p>Hábitat es una serie de fotografías en las que aparecen seres que representan personajes o entes híbridos vinculados a lo sagrado afrocaribeño. A través de la puesta en escena, el vestuario y el uso de materiales como fibras, cabellos y materia orgánica, las imágenes evocan el tránsito entre vida, muerte y espíritu. Estos personajes funcionan como dioses encarnados, presencias que habitan el umbral entre lo visible y lo invisible, y que reconfiguran las cosmologías afrocaribeñas desde una estética de resistencia. La serie confronta las narrativas coloniales sobre el cuerpo, la espiritualidad y la identidad, afirmando estas cosmologías como un sistema epistemológico propio y vigente.</p>
 <p><em>ADN del aguacero: memorias entrelazadas</em> es una instalación realizada con cabello que cuelga del techo. El cabello, trenzado y dispuesto de forma vertical, evoca raíces que descienden y se entrelazan en el espacio. Las trenzas remiten a prácticas ancestrales de cuidado preservadas por comunidades africanas y afrodescendientes como actos de juntanza, afirmación y resistencia histórica. Durante la trata esclavista, las trenzas funcionaron como archivo y mapa, trazando rutas de escape, mensajes cifrados, lugar para guardar oro, semillas y coordenadas hacia la libertad. En la instalación, este gesto de trenzar se manifiesta como un tejido que enlaza cuerpos, memorias, afectos y territorios, revelando una sabiduría que persiste y se activa en el presente.</p>
 <p><strong>Presencias humanas:</strong><br>
+<br />
 Shirlene Malambo.</p>
 <p><strong>Presencias más que humanas:</strong><br>
+<br />
 Energía de Oyá y de otros orishas. Energía del agua y del aguacero como pulsación vital. Fuerzas del monte, espíritus de las raíces y de la tierra húmeda, memorias ancestrales que habitan las fibras, el cabello y la máscara. Corrientes invisibles que danzan entre lo natural y lo espiritual.</p>
 <p>El cabello aparece como semilla de memoria: cada trenza guarda voces, genealogías y saberes que respiran a través del tiempo, evocando el linaje afro y la fuerza creadora de lo femenino ancestral.</p>
 <p><strong>Territorios:</strong><br>
+<br />
 El cuerpo como extensión del paisaje y del rito. El entrelazado como territorio simbólico donde lo individual y lo colectivo se funden. El monte, el jardín y la casa como espacios sagrados donde la materia y el espíritu se entrelazan. La obra encarna un ADN espiritual que conecta la memoria afrocolombiana con los ciclos de la naturaleza, afirmando territorios donde lo visible y lo invisible coexisten como formas vivas de conocimiento.</p>
 <h2 id="albor"><em>ALBOR</em></h2>
 <p><strong>Shirlene Malambo</strong><br>
@@ -4175,8 +4205,10 @@ Cuadro vivo / instalación <br>
 </div>
 </div>
 
+      </div>
     </div>
-  </div>
+  
+
 
   
   
@@ -4193,7 +4225,6 @@ Cuadro vivo / instalación <br>
   
   
   
-
 
   
   
@@ -4244,7 +4275,9 @@ Cuadro vivo / instalación <br>
             Escuela Taller del Norte del Cauca
           
           
-            <div class="proyecto-info-lugar-direccion">Barrio las Dos Aguas, Puerto Tejada</div>
+            <div class="proyecto-info-lugar-direccion">
+              Barrio las Dos Aguas, Puerto Tejada
+            </div>
           
           
           
@@ -4259,16 +4292,16 @@ Cuadro vivo / instalación <br>
           </div>
         </div>
       
-  
-  
-  
-  
-  
-    
-  
-  <div class="proyecto-info-gente-container-desktop">
-    <div class="proyecto-info-gente">
       
+      
+      
+      
+      
+        
+      
+      <div class="proyecto-info-gente-container-desktop">
+        <div class="proyecto-info-gente">
+          
   
   
   <div class="artists-list-label">
@@ -4311,13 +4344,13 @@ Cuadro vivo / instalación <br>
   </ul>
 
 
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="proyecto-info-gente-container">
-  <div class="proyecto-info-gente">
-    
+    <div class="proyecto-info-gente-container">
+      <div class="proyecto-info-gente">
+        
   
   
   <div class="artists-list-label">
@@ -4360,15 +4393,15 @@ Cuadro vivo / instalación <br>
   </ul>
 
 
-  </div>
-</div>
+      </div>
+    </div>
   </div>
   
     <div class="proyecto-links-container">
       <div class="diamonds-left"></div>
       <div class="proyecto-links-diamond">
         
-          <a href="/agenda" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
+          <a href="/agenda?fecha=2025-10-27" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
 
         
       </div>
@@ -5111,8 +5144,44 @@ Cuadro vivo / instalación <br>
     </div>
   </div>
 
+  
+
       </section>
     </main>
+
+    
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+    <p>Exposición: Monte Adentro</p>
+
+    
+      
+        
+        
+          <ul>
+            
+              <li>Alexandra Idrobo</li>
+            
+              <li>Joyce Rivas</li>
+            
+              <li>Shirlene Malambo</li>
+            
+          </ul>
+        
+      
+    
+  
+</div>
+
 
     
     

@@ -22,7 +22,10 @@
 
 
 
-<meta name="pagefind:weight" content="1" />
+
+  
+
+<meta name="pagefind:weight" content="12" />
 
 
 
@@ -200,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4024,10 +4027,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4086,20 +4101,15 @@ if (typeof initHeaderOnReady === "function") {
     <main class="
   
   bg-white
-">
+" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   
 
 
   
-  <div
-    class="proyecto-categorias-container bg-burnt-orange">
-    <div id="proyecto-categorias" class="proyecto-categorias">
-      
-      
-    </div>
-  </div>
+  
+
 
   
   <div class="proyecto-titulo-container">
@@ -4111,12 +4121,27 @@ if (typeof initHeaderOnReady === "function") {
   </div>
 
   
-  <div class="proyecto-contenido-container">
-    <div
-      id="proyecto-contenido"
-      class="proyecto-contenido text-deep-pink">
-      <div class="page-content-container ">
-  <div class="page-content-text"><p>Las guardias —indígena, cimarrona y campesina— presentes en el Cauca son formas propias, autónomas y pacíficas de cuidado y protección de la vida y del territorio. Como sistemas comunitarios de cuidado, anteponen el bienestar colectivo al interés individual, un principio que desborda la lógica de lo privado y lo exclusivamente propio. Saben que cuidar la semilla es cuidar la montaña entera.</p>
+  
+  
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  
+  
+  
+    <div class="proyecto-contenido-container">
+      
+        <div
+  class="pc-sections-container
+    pc-sections--component-expositivo-expandido
+  "><section class="pc-section-band pc-section-band-intro">
+          <div class="pc-section-content"><p>Las guardias —indígena, cimarrona y campesina— presentes en el Cauca son formas propias, autónomas y pacíficas de cuidado y protección de la vida y del territorio. Como sistemas comunitarios de cuidado, anteponen el bienestar colectivo al interés individual, un principio que desborda la lógica de lo privado y lo exclusivamente propio. Saben que cuidar la semilla es cuidar la montaña entera.</p>
 <p>El fuego ha ocupado un lugar central en la vida comunitaria de muchos pueblos. En la tulpa, en el Cauca, el fuego congrega, equilibra, limpia y transforma. A su alrededor se ofrenda y se convoca a los espíritus y a quienes estuvieron antes que nosotrxs: compartimos el mismo fuego. Sus señas ascienden desde el fondo de la tierra en forma de volcán, hasta los fogones. Sus mensajes, custodios de la comunidad, solo se revelan para quienes sepan prestar atención.</p>
 <p>De las guardias aprendemos que guardar el mundo de viejos y nuevos extractivismos sigue siendo urgente. Aquí, guardar no significa acumular, sino cuidar. En esta distorsión radica el problema: nos han saqueado el agua, los bosques, las montañas, las piedras, los objetos sagrados y los conocimientos. La acumulación ha estado sostenida por la explotación de las vidas y los territorios. Pero el mundo no es una cosa que se posee: es un cuerpo vivo que nos contiene. No solo los humanos modificamos el territorio, el territorio y todos sus seres también nos moldean en un ejercicio infinito de reciprocidad y transformación.</p>
 <p>En los procesos reunidos en esta exposición, unos seres ya no dominan sobre otros: persisten los ensayos para derrocar las jerarquías que justifican cualquier tipo de violencia. Aquí, las relaciones binarias impuestas por la colonialidad se vuelven porosas, se desdibujan en un solo cuerpo-territorio donde, a pesar del miedo, la vida se entrelaza sin centro ni borde.</p>
@@ -4180,16 +4205,19 @@ Aliados: Programa Nacional de Estímulos del Ministerio de las Culturas, las Art
 <p><strong>Presencias más que humanas:</strong>
 Colecciones Quimbaya, seres vegetales y animales.</p>
 <p><strong>Territorios:</strong>
-El trabajo de Gente del ECO es antecedido por un proceso de búsqueda de visión en el Bosque KAUKITÁ, en Pereira, y específicamente este proyecto se ha desarrollado en las ciudades de Pereira (Risaralda), Medellín (Antioquia) y Wampia (Cauca).</p>
-<div class="pc-tool-section section-1">
-<p><strong>Gente del ECO Quimbaya</strong>
+El trabajo de Gente del ECO es antecedido por un proceso de búsqueda de visión en el Bosque KAUKITÁ, en Pereira, y específicamente este proyecto se ha desarrollado en las ciudades de Pereira (Risaralda), Medellín (Antioquia) y Wampia (Cauca).</p></div>
+        </section><section
+          class="pc-section-band section-1
+            section-1
+          ">
+          <div class="pc-section-content"><p><strong>Gente del ECO Quimbaya</strong>
 <br /></p>
 <p>Propone una ruta para descolonizar la Colección Quimbaya, un legado cultural orfebre probablemente producido entre los siglos IV y V d. C., enmarcado en un periodo más amplio de producción denominado Quimbaya temprano, datado entre los siglos III a. C. y III d. C. La Colección fue sustraída del actual departamento de Quindío a finales del siglo XIX.</p>
 <p>El Museo de América, en Madrid, España, ha preservado la Colección Quimbaya y enriquecido la mirada sobre ella a través del análisis y el estudio de las piezas, aun cuando su impronta las haya descontextualizado de la trama sutil de significados a la que pertenecieron. Por su parte, el Museo Nacional de Colombia ha buscado desde hace 135 años la protección de la colección, y desde hace cinco décadas se han propuesto múltiples intenciones de restitución al país por parte de diversas entidades colombianas.</p>
 <p>Nos acercamos a algunas de las piezas salvaguardadas en el Museo de América y a otras de la Sala Arqueológica de la Fundación Hacienda Castilla, en Pereira, Colombia, la cual ha adelantado procesos de rematriación y cuenta con una colección significativa de piezas cerámicas quimbaya (datadas de los siglos VII a XVI), cerca al sitio del despojo de los ajuares funerarios en Filandia y Quimbaya.</p>
 <p>La guía de los sabedores y sabedoras, bajo la Ley de Origen, conduce a sembrar gentes, con el fin de armonizar las relaciones y restituir el sutil tejido de significados de las piezas que componen la colección. Descolonizar la Colección Quimbaya supone transitar al pensamiento vegetal, en consonancia con la Ley de Origen, como respuesta al momento en que la transfiguración del metal para fines rituales se convirtió en “extractivismo” de la colección. Esta muestra contribuye desde la práctica artística al mandato de rematriación.</p>
 <div style="text-align: right;">Gente del ECO</div>
-</div>
+
 <br /><br />
 <p><strong>Estructura para hacer montaña</strong>
 <br />
@@ -4589,12 +4617,13 @@ Víctor Hugo Narváez (dibujo de mural) y Erika Uza (cuidado y asistencia).</p>
 <p><strong>Presencias más que humanas:</strong>
 Piedras de la colección de geología del Museo de Historia Natural de la Universidad del Cauca. Bosques transformados: papel, vitrinas, suelos, techos, puertas, ventanas.</p>
 <p><strong>Territorios:</strong>
-Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto desplaza una serie de operaciones artísticas realizadas en otros territorios para situar su investigación en el territorio del Cauca.</p>
-</div>
-</div>
+Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto desplaza una serie de operaciones artísticas realizadas en otros territorios para situar su investigación en el territorio del Cauca.</p></div>
+        </section></div>
 
+      
     </div>
-  </div>
+  
+
 
   
   
@@ -4611,7 +4640,6 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
   
   
   
-
 
   
   
@@ -4666,7 +4694,9 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
             MAMPO - Casa Arte
           
           
-            <div class="proyecto-info-lugar-direccion">Barrio La Pamba, Popayán</div>
+            <div class="proyecto-info-lugar-direccion">
+              Barrio La Pamba, Popayán
+            </div>
           
           
           
@@ -4681,16 +4711,16 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
           </div>
         </div>
       
-  
-  
-  
-  
-  
-    
-  
-  <div class="proyecto-info-gente-container-desktop">
-    <div class="proyecto-info-gente proyecto-info-gente--two-cols">
       
+      
+      
+      
+      
+        
+      
+      <div class="proyecto-info-gente-container-desktop">
+        <div class="proyecto-info-gente proyecto-info-gente--two-cols">
+          
   
   
   <div class="artists-list-label">
@@ -4918,13 +4948,13 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
   </ul>
 
 
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="proyecto-info-gente-container">
-  <div class="proyecto-info-gente proyecto-info-gente--two-cols">
-    
+    <div class="proyecto-info-gente-container">
+      <div class="proyecto-info-gente proyecto-info-gente--two-cols">
+        
   
   
   <div class="artists-list-label">
@@ -5152,15 +5182,15 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
   </ul>
 
 
-  </div>
-</div>
+      </div>
+    </div>
   </div>
   
     <div class="proyecto-links-container">
       <div class="diamonds-left"></div>
       <div class="proyecto-links-diamond">
         
-          <a href="/agenda" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
+          <a href="/agenda?fecha=2025-10-25" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
 
         
       </div>
@@ -6182,8 +6212,86 @@ Sandra nace en Perú, vive y trabaja en Madrid, España. En este proyecto despla
     </div>
   </div>
 
+  
+
       </section>
     </main>
+
+    
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+    <p>Exposición: Guardias del fuego compartido</p>
+
+    
+      
+        
+        
+          <ul>
+            
+              <li>MAMPO / Casa Arte</li>
+            
+              <li>Angélica Ramírez (Diagrama)</li>
+            
+              <li>Astrid González</li>
+            
+              <li>Gente del Eco</li>
+            
+              <li>Luz Adriana Vera</li>
+            
+              <li>Daniela Tobar</li>
+            
+              <li>Jota Mombaça</li>
+            
+              <li>Jean Lucumí</li>
+            
+              <li>Julieth Morales</li>
+            
+              <li>Residencia Casa Del Sueño</li>
+            
+              <li>Deifer Ibañez</li>
+            
+              <li>Fabián Moreno</li>
+            
+              <li>Un Río Cauca, Muchos Mundos</li>
+            
+              <li>Iconoclasistas</li>
+            
+              <li>Colectivo Amapola</li>
+            
+              <li>Gerson Vargas</li>
+            
+              <li>Zapanteras Negras</li>
+            
+              <li>Proceso De La Liberación De La Madre Tierra</li>
+            
+              <li>Gráfica PAI</li>
+            
+              <li>Juan Sebastián Rosillo</li>
+            
+              <li>María Isabel Rueda</li>
+            
+              <li>Juan Pablo Gaviria Bedoya</li>
+            
+              <li>Museo de Historia Natural de Unicauca</li>
+            
+              <li>Sandra Gamarra H.</li>
+            
+          </ul>
+        
+      
+    
+  
+</div>
+
 
     
     

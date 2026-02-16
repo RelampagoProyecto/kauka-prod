@@ -22,9 +22,10 @@
 
 
 
+
   
 
-<meta name="pagefind:weight" content="10" />
+<meta name="pagefind:weight" content="8" />
 
 
 
@@ -202,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4024,10 +4025,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4083,7 +4096,7 @@ if (typeof initHeaderOnReady === "function") {
 
 
 
-    <main class="">
+    <main class="" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   <div id="calendar" class="agenda-container agenda-principal"></div>
@@ -4109,6 +4122,69 @@ if (typeof initHeaderOnReady === "function") {
 
   <script>
   const events = [
+    
+      {
+        title: 'El futuro que nunca fue \/ Performance de Marilyn Boror',
+        url: 'https:\/\/47sna.com\/programa-curatorial\/expositivo-expandido\/el-futuro-que-nunca-fue\/',
+        
+          
+          
+          
+          
+          
+          
+
+          start: '2025-10-25T15:30:00',
+          end: '2025-10-25T16:00:00',
+          allDay: false,
+        
+        
+        
+        classNames: ['programa-curatorial-event']
+        
+      },
+    
+      {
+        title: 'Fiesta popular en el centro de Popayán',
+        url: 'https:\/\/47sna.com\/programa-curatorial\/vivencial\/fiesta-popular-en-el-centro-de-popayan\/',
+        
+          
+          
+          
+          
+          
+          
+
+          start: '2025-10-24T18:00:00',
+          end: '2025-10-24T20:30:00',
+          allDay: false,
+        
+        
+        
+        classNames: ['programa-curatorial-event']
+        
+      },
+    
+      {
+        title: 'La palabra dicha \/ Performance de Eider Yangana',
+        url: 'https:\/\/47sna.com\/programa-curatorial\/expositivo-expandido\/la-palabra-dicha\/',
+        
+          
+          
+          
+          
+          
+          
+
+          start: '2025-10-25T18:00:00',
+          end: '2025-10-25T19:00:00',
+          allDay: false,
+        
+        
+        
+        classNames: ['programa-curatorial-event']
+        
+      },
     
       {
         title: 'Alfabeto natural en el espacio público con el Colectivo Cenzontle',
@@ -4711,96 +4787,22 @@ if (typeof initHeaderOnReady === "function") {
     </main>
 
     
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+</div>
+
+
     
-  
-
-
-
-
-
-
-
-  
-  
     
-  
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-
-  
-  
-
-  
-  
-    
-  
-
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-    
-  
-
-
-  <footer
-    class="site-footer bg-gray-950 text-white"
-    style="background-color: rgb(3, 7, 18);">
-    <div
-      class="footer-content bg-gray-950 text-white"
-      style="background-color: rgb(3, 7, 18);">
-      
-    </div>
-  </footer>
-
-
-
 
 
     

@@ -22,7 +22,10 @@
 
 
 
-<meta name="pagefind:weight" content="1" />
+
+  
+
+<meta name="pagefind:weight" content="12" />
 
 
 
@@ -200,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4024,10 +4027,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4083,7 +4098,7 @@ if (typeof initHeaderOnReady === "function") {
 
 
 
-    <main class="">
+    <main class="" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   <div
@@ -4497,7 +4512,7 @@ if (typeof initHeaderOnReady === "function") {
       <div class="asamblea-info-diamonds-left"></div>
       <div class="asamblea-info-links-diamond">
         
-          <a href="/agenda" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
+          <a href="/agenda?fecha=2025-10-24" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
 
         
       </div>
@@ -4514,8 +4529,6 @@ if (typeof initHeaderOnReady === "function") {
     <div class="asamblea-single-section asamblea-single-desarrollo">
       <div class="asamblea-single-section-content">
         La conversación permitió reconocer los mundos posibles que ya existen: planes de vida, luchas y proyectos de cada una de las personas asamblearias y afirmar el título del salón no como una metáfora, una idea poética o un horizonte de posibilidades, sino como una realidad de muchos territorios, comunidades y personas que habitan el Cauca.
-<br /><br />
-En este espacio, abierto al público, se realizó también un ejercicio de escucha colectiva de una pieza sonora realizada con fragmentos de audios que lxs integrantes del equipo curatorial, pedagógico y de mediación hizo, dirigiendo un mensaje a unx mayorx o líder/lideresa de la asamblea sobre cómo su orientación se veía reflejadas en la programación o configuración de esta versión del Salón Nacional.
       </div>
     </div>
   
@@ -5254,9 +5267,59 @@ En este espacio, abierto al público, se realizó también un ejercicio de escuc
 
   
   
+    <div class="asamblea-single-section asamblea-single-propuestas">
+      <div class="asamblea-single-section-content">
+        En este espacio, abierto al público, se realizó también un ejercicio de escucha colectiva de una pieza sonora realizada con fragmentos de audios que lxs integrantes del equipo curatorial, pedagógico y de mediación hizo, dirigiendo un mensaje a unx mayorx o líder/lideresa de la asamblea sobre cómo su orientación se veía reflejadas en la programación o configuración de esta versión del Salón Nacional.
+      </div>
+    </div>
+  
 
       </section>
     </main>
+
+    
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+    <p>Tercera asamblea de mundos posibles</p>
+
+    
+      
+        
+        
+          <ul>
+            
+              <li>Mayora Elena Hinestroza</li>
+            
+              <li>Johnajohn Campo (Pasión Cusqueña)</li>
+            
+              <li>Jorge Eliécer Llanos Dorronsoro</li>
+            
+              <li>Mayor Luis Aureliano Yonda Copaque</li>
+            
+              <li>Mayora Emelda Jiménez</li>
+            
+              <li>Taita Lorenzo Tunubalá Hurtado</li>
+            
+              <li>Twiggy Escobar</li>
+            
+              <li>Yohan Jarvy Ledezma Ausecha</li>
+            
+          </ul>
+        
+      
+    
+  
+</div>
+
 
     
     

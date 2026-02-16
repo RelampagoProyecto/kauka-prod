@@ -22,7 +22,10 @@
 
 
 
-<meta name="pagefind:weight" content="1" />
+
+  
+
+<meta name="pagefind:weight" content="12" />
 
 
 
@@ -200,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.97a4009c33737111e14b704b8b55e64c7a1945430962e1a62a77a7ceffd88279.css"
-  integrity="sha256-l6QAnDNzcRHhS3BLi1XmTHoZRUMJYuGmKnenzv/Ygnk="
+  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
+  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
   rel="stylesheet" />
 
 
@@ -4024,10 +4027,22 @@
       }
 
       try {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const normalizeSearchTerm = (term) => {
+          if (typeof term !== "string") return "";
+          return term
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        };
+
         new PagefindUI({
           element: "#search",
-          pageSize: 3,
-          showSubResults: true,
+          pageSize: isMobile ? 5 : 7,
+          showSubResults: false,
+          processTerm: normalizeSearchTerm,
           translations: {
             placeholder: "Buscar...",
             clear_search: "X",
@@ -4083,7 +4098,7 @@ if (typeof initHeaderOnReady === "function") {
 
 
 
-    <main class="">
+    <main class="" data-pagefind-ignore>
       <section class="mp-10 grid grid-cols-12 gap-4 gap-y-0 lg:gap-x-0">
         
   
@@ -4279,20 +4294,20 @@ if (typeof initHeaderOnReady === "function") {
 
   
   
-    <div class="encuentro-info-links-container">
-      <div class="encuentro-info-diamonds-left"></div>
-      <div class="encuentro-info-links-diamond">
-        
-          <a href="/agenda" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
-
-        
-      </div>
-      <div class="encuentro-info-links-diamond">
-        
-      </div>
-      <div class="encuentro-info-diamonds-right"></div>
-    </div>
   
+    
+  
+  <div class="encuentro-info-links-container">
+    <div class="encuentro-info-diamonds-left"></div>
+    <div class="encuentro-info-links-diamond">
+      <a href="/encuentros-de-mundos-posibles/?fecha=2025-11-27" class="agenda-action-button agenda-action-button--diamond">Agenda</a>
+
+    </div>
+    <div class="encuentro-info-links-diamond">
+      
+    </div>
+    <div class="encuentro-info-diamonds-right"></div>
+  </div>
 
   
   <div id="encuentro-galeria" class="encuentro-galeria-with-padding">
@@ -4841,6 +4856,44 @@ if (typeof initHeaderOnReady === "function") {
 
       </section>
     </main>
+
+    
+
+
+
+
+
+
+<div
+  data-pagefind-body
+  style="position:absolute;left:-99999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  aria-hidden="true">
+  
+    <p>Autonomías políticas en el arte</p>
+
+    
+      
+        
+        
+          <ul>
+            
+              <li>Adolfo Albán Achinte</li>
+            
+              <li>Felipe Guerra (COOPIA)</li>
+            
+              <li>Fabián Villegas</li>
+            
+              <li>Luis Hernández Mellizo Y Lina Bolaños (Sindicato Mutar)</li>
+            
+              <li>Olga Eusse</li>
+            
+          </ul>
+        
+      
+    
+  
+</div>
+
 
     
     
