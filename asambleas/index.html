@@ -203,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
-  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
+  href="/css/style.min.46eee7f4e9f7c733f6c57a160494ed2e25b3bee0fbdfd279dd048ac5f549479a.css"
+  integrity="sha256-Ru7n9On3xzP2xXoWBJTtLiWzvuD739J53QSKxfVJR5o="
   rel="stylesheet" />
 
 
@@ -223,10 +223,10 @@
 <style>
   :root {
      
-    --mobile-menu-color: ZgotmplZ;
+    --mobile-menu-color: var(--color-golden-yellow);
 
      
-    --submenu-indicator-color: ZgotmplZ;
+    --submenu-indicator-color: var(--color-golden-yellow);
 
      
     --mobile-home-color: #ffffff;
@@ -4038,7 +4038,8 @@
 
         new PagefindUI({
           element: "#search",
-          pageSize: isMobile ? 5 : 7,
+          pageSize: isMobile ? 1 : 3,
+          debounceTimeout: 500,
           showSubResults: false,
           processTerm: normalizeSearchTerm,
           translations: {
@@ -4278,13 +4279,6 @@ if (typeof initHeaderOnReady === "function") {
 
           <div class="asambleas-list-item_gallery">
             
-              <div class="asambleas-list-image">
-                <img
-                  src="/asambleas/primera-asamblea-de-mundos-posibles/portada.webp"
-                  alt="Primera asamblea de mundos posibles"
-                  loading="lazy" />
-              </div>
-            
             <div class="asambleas-list-item_content"></div>
 
             <div class="asambleas-list-item_content">
@@ -4322,13 +4316,6 @@ if (typeof initHeaderOnReady === "function") {
 
 
           <div class="asambleas-list-item_gallery">
-            
-              <div class="asambleas-list-image">
-                <img
-                  src="/asambleas/segunda-asamblea-de-mundos-posibles/portada.webp"
-                  alt="Segunda asamblea de mundos posibles"
-                  loading="lazy" />
-              </div>
             
             <div class="asambleas-list-item_content"></div>
 
@@ -4368,13 +4355,6 @@ if (typeof initHeaderOnReady === "function") {
 
           <div class="asambleas-list-item_gallery">
             
-              <div class="asambleas-list-image">
-                <img
-                  src="/asambleas/tercera-asamblea-de-mundos-posibles/portada.webp"
-                  alt="Tercera asamblea de mundos posibles"
-                  loading="lazy" />
-              </div>
-            
             <div class="asambleas-list-item_content"></div>
 
             <div class="asambleas-list-item_content">
@@ -4394,6 +4374,44 @@ if (typeof initHeaderOnReady === "function") {
               
                 <p class="asambleas-list-summary">
                   La Tercera Asamblea se realizó en La Tulpa de la UAIIN-CRIC, donde la espiritualidad propia permitió gestar la conversación alrededor del fuego y los remedios propios del territorio.
+                </p>
+                <p class="asambleas-list-link_arrow" aria-hidden="true"></p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        
+        
+
+
+        <article class="asambleas-list-item">
+          
+          
+
+
+          <div class="asambleas-list-item_gallery">
+            
+            <div class="asambleas-list-item_content"></div>
+
+            <div class="asambleas-list-item_content">
+              <header class="asambleas-list-header">
+                <h3 class="asambleas-list-title">
+                  <a href="https://47sna.com/asambleas/cuarta-asamblea-de-mundos-posibles/" class="asambleas-list-link">
+                    
+                      <span class="asambleas-list-orden"
+                        > 4</span
+                      >
+                    
+                    <span class="asambleas-list-titulo">Cuarta asamblea de mundos posibles</span>
+                  </a>
+                </h3>
+              </header>
+
+              
+                <p class="asambleas-list-summary">
+                  La Asamblea de cierre se realizó en el litoral pacífico caucano, recibida por la mayora Elena Hinestroza y el curador Eblin Grueso, con el objetivo de construir los Mandatos del 47 SNA.
                 </p>
                 <p class="asambleas-list-link_arrow" aria-hidden="true"></p>
               
@@ -4453,11 +4471,8 @@ if (typeof initHeaderOnReady === "function") {
           
           <div class="asambleas-list-image-col">
             
-              <img
-                src="/asambleas/primera-asamblea-de-mundos-posibles/portada.webp"
-                alt="Primera asamblea de mundos posibles"
-                class="asambleas-list-image-desktop"
-                loading="lazy" />
+              
+              <div class="asambleas-list-image-desktop h-96 bg-gray-400"></div>
             
           </div>
         </article>
@@ -4508,11 +4523,8 @@ if (typeof initHeaderOnReady === "function") {
           
           <div class="asambleas-list-image-col">
             
-              <img
-                src="/asambleas/segunda-asamblea-de-mundos-posibles/portada.webp"
-                alt="Segunda asamblea de mundos posibles"
-                class="asambleas-list-image-desktop"
-                loading="lazy" />
+              
+              <div class="asambleas-list-image-desktop h-96 bg-gray-400"></div>
             
           </div>
         </article>
@@ -4563,11 +4575,60 @@ if (typeof initHeaderOnReady === "function") {
           
           <div class="asambleas-list-image-col">
             
-              <img
-                src="/asambleas/tercera-asamblea-de-mundos-posibles/portada.webp"
-                alt="Tercera asamblea de mundos posibles"
-                class="asambleas-list-image-desktop"
-                loading="lazy" />
+              
+              <div class="asambleas-list-image-desktop h-96 bg-gray-400"></div>
+            
+          </div>
+        </article>
+      
+        
+        
+        
+        
+        
+        
+        
+
+
+        <article class="asambleas-list-item-desktop">
+          
+          <div class="asambleas-list-content-col bg-asamblea-gallery_2">
+            
+              <div class="asambleas-list-orden-desktop">
+                 4
+              </div>
+            
+
+
+            <h3 class="asambleas-list-titulo-desktop">
+              <a
+                href="https://47sna.com/asambleas/cuarta-asamblea-de-mundos-posibles/"
+                class="transition-colors duration-200 hover:text-white/70">
+                Cuarta asamblea de mundos posibles
+              </a>
+            </h3>
+
+            
+              <p class="asambleas-list-resumen-desktop">
+                La Asamblea de cierre se realizó en el litoral pacífico caucano, recibida por la mayora Elena Hinestroza y el curador Eblin Grueso, con el objetivo de construir los Mandatos del 47 SNA.
+                
+              </p>
+
+              <a
+                href="https://47sna.com/asambleas/cuarta-asamblea-de-mundos-posibles/"
+                class="asambleas-list-arrow-desktop">
+                <span class="asambleas-list-arrow-text" aria-hidden="true"
+                  >→</span
+                >
+              </a>
+            
+          </div>
+
+          
+          <div class="asambleas-list-image-col">
+            
+              
+              <div class="asambleas-list-image-desktop h-96 bg-gray-400"></div>
             
           </div>
         </article>

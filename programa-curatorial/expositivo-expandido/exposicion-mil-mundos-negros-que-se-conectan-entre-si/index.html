@@ -203,8 +203,8 @@
 
 
 <link
-  href="/css/style.min.bb6853a3dbd6258f990f7b9b2730b6db0a1d71747f12225db9420c1df09e4888.css"
-  integrity="sha256-u2hTo9vWJY&#43;ZD3ubJzC22wodcXR/EiJduUIMHfCeSIg="
+  href="/css/style.min.46eee7f4e9f7c733f6c57a160494ed2e25b3bee0fbdfd279dd048ac5f549479a.css"
+  integrity="sha256-Ru7n9On3xzP2xXoWBJTtLiWzvuD739J53QSKxfVJR5o="
   rel="stylesheet" />
 
 
@@ -223,10 +223,10 @@
 <style>
   :root {
      
-    --mobile-menu-color: ZgotmplZ;
+    --mobile-menu-color: rgb(68, 34, 8);
 
      
-    --submenu-indicator-color: ZgotmplZ;
+    --submenu-indicator-color: rgb(68, 34, 8);
 
      
     --mobile-home-color: #ffffff;
@@ -4040,7 +4040,8 @@
 
         new PagefindUI({
           element: "#search",
-          pageSize: isMobile ? 5 : 7,
+          pageSize: isMobile ? 1 : 3,
+          debounceTimeout: 500,
           showSubResults: false,
           processTerm: normalizeSearchTerm,
           translations: {
@@ -4124,35 +4125,31 @@ if (typeof initHeaderOnReady === "function") {
   
   
   
+
   
+  
+  
+  
+
   
     
-      
-    
-  
-  
-  
-  
-  
-  
     <div class="proyecto-contenido-container">
-      <div
-        id="proyecto-contenido"
-        class="proyecto-contenido text-deep-pink">
-        <div class="page-content-container ">
-  <div class="page-content-text"><p>MIL MUNDOS NEGROS QUE SE CONECTAN ENTRE SÍ*</p>
+      <section
+        class="pc-section-band pc-section-band-intro
+          text-deep-pink
+        ">
+        <div class="pc-section-content"><p>MIL MUNDOS NEGROS QUE SE CONECTAN ENTRE SÍ*</p>
 <p>La oscuridad es la lengua de los cuerpos que no se dejan traducir. Ahí, los encuentros se afirman como tejido comunitario vivo y se separan del régimen de la visibilidad colonial. Desde allí se reclama el derecho a la opacidad propuesto por Édouard Glissant, no para esconderse, sino para existir sin ser reducidxs y para tejer vínculos que no deban rendirse a la claridad hegemónica. La penumbra aloja tecnologías metafísicas negras: rezos que curan, plantas que enseñan, ancestrxs que convocan y constelaciones que orientan. La oscuridad no equivale a ceguera, más bien nombra políticas de conspiración y pedagogías de transmisión de saberes.
 El ennegrecimiento posee rutas propias, se alía con las sombras, aparta la visibilidad forzada y, como una estrategia de reapropiación temporal y espiritual, desdobla el tiempo lineal. Cuando una planta dicta su receta, cuando el nombre de una persona negra irrumpe en el archivo, cuando una estrella enlaza hemisferios, los mundos negros se reconocen, se llaman y se conectan. Estas rutas, saberes y gestos son desarrollados y materializados por lxs artistas que integran esta exposición, cuyas prácticas encarnan la oscuridad.
 Los proyectos reunidos en la exposición no buscan representar la oscuridad, sino operar desde ella como método estético, político y epistemológico. A través de archivos híbridos, diagramas cósmicos, conjuros y recetas con plantas, estas prácticas parten de una desconfianza de la transparencia y proponen, en cambio, modos de relación basados en la opacidad, la escucha y la co-presencia. Así, la exposición se configura como un espacio en el que no se revela todo, sino donde se resguardan y se conectan mundos posibles que continúan desarrollándose en la oscuridad.</p>
+<!-- nota al pie -->
 <p>*Referencia a Black Liberation Zodiac (Zodíaco de la Liberación Negra), proyecto de Nolan Oswald Dennis.</p>
-<p>INVITADXS</p>
-<p>Salón de la Excelencia - Secretaría de Educación y Cultura, Santander de Quilichao: Astrid González y Nolan Oswald Dennis.</p>
-<p>Capilla Santa Bárbara de Dominguillo, vereda Dominguillo, Santander de Quilichao: Alejandra Sánchez y Joyce Rivas.</p>
-</div>
-</div>
-
-      </div>
+<!-- /nota al pie --></div>
+      </section>
     </div>
+    
+      
+    
   
 
 
@@ -4207,7 +4204,7 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
         <div class="proyecto-info-hora-desktop">
           <div class="proyecto-info-info_label">Hora</div>
           <div class="proyecto-info-hora-lugar">
-            9:00 a.m. - 5:00 p.m.
+            Todo el día
           </div>
         </div>
       
@@ -4218,7 +4215,7 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
         <div class="proyecto-info-lugar proyecto-info-hora-lugar">
           <div class="proyecto-info-info_label">Sede/lugar</div>
           
-            Secretaría de Educación y Cultura de Santander de Quilichao, Salón de la Excelencia
+            Secretaría de Educación y Cultura de Santander de Quilichao, Salón de la Excelencia / Capilla Santa Bárbara de Dominguillo
           
           
             <div class="proyecto-info-lugar-direccion">
@@ -4234,7 +4231,7 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
         <div class="proyecto-info-hora">
           <div class="proyecto-info-info_label">Hora</div>
           <div class="proyecto-info-hora-lugar">
-            9:00 a.m. - 5:00 p.m.
+            Todo el día
           </div>
         </div>
       
@@ -4258,19 +4255,34 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
 
   
 
+
   <ul>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item
+          artist-item-sede
+        ">
         
-          <a class="artist-link" href="/invitadxs/fotos-generales-expo/">
-            Fotos Generales Expo
-          </a>
+          <span class="artist-link artist-link-sede">Salón de la Excelencia, Santander de Quilichao</span>
         
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-itemartist-item-note">
+        
+          <span
+            class="artist-link artist-link-note"
+            style="font-size: 0.8em; margin-top: -0.5em; display: block; line-height: 1.2;"
+            >Horarios: Miércoles a lunes (martes cerrado), 9:00 a.m. - 5:00 p.m.</span
+          >
+        
+      </li>
+    
+      
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/astrid-gonzalez/">
             Astrid González
@@ -4279,7 +4291,8 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/nolan-oswald-dennis/">
             Nolan Oswald Dennis
@@ -4288,7 +4301,30 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item
+          artist-item-sede
+        ">
+        
+          <span class="artist-link artist-link-sede">Capilla Santa Bárbara de Dominguillo</span>
+        
+      </li>
+    
+      
+      <li
+        class="artist-itemartist-item-note">
+        
+          <span
+            class="artist-link artist-link-note"
+            style="font-size: 0.8em; margin-top: -0.5em; display: block; line-height: 1.2;"
+            >Horarios: Viernes a lunes (martes a jueves cerrado), 9:00 a.m. - 5:00 p.m.</span
+          >
+        
+      </li>
+    
+      
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/maria-alejandra-sanchez/">
             María Alejandra Sánchez
@@ -4297,7 +4333,8 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/joyce-rivas/">
             Joyce Rivas
@@ -4325,19 +4362,34 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
 
   
 
+
   <ul>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item
+          artist-item-sede
+        ">
         
-          <a class="artist-link" href="/invitadxs/fotos-generales-expo/">
-            Fotos Generales Expo
-          </a>
+          <span class="artist-link artist-link-sede">Salón de la Excelencia, Santander de Quilichao</span>
         
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-itemartist-item-note">
+        
+          <span
+            class="artist-link artist-link-note"
+            style="font-size: 0.8em; margin-top: -0.5em; display: block; line-height: 1.2;"
+            >Horarios: Miércoles a lunes (martes cerrado), 9:00 a.m. - 5:00 p.m.</span
+          >
+        
+      </li>
+    
+      
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/astrid-gonzalez/">
             Astrid González
@@ -4346,7 +4398,8 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/nolan-oswald-dennis/">
             Nolan Oswald Dennis
@@ -4355,7 +4408,30 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item
+          artist-item-sede
+        ">
+        
+          <span class="artist-link artist-link-sede">Capilla Santa Bárbara de Dominguillo</span>
+        
+      </li>
+    
+      
+      <li
+        class="artist-itemartist-item-note">
+        
+          <span
+            class="artist-link artist-link-note"
+            style="font-size: 0.8em; margin-top: -0.5em; display: block; line-height: 1.2;"
+            >Horarios: Viernes a lunes (martes a jueves cerrado), 9:00 a.m. - 5:00 p.m.</span
+          >
+        
+      </li>
+    
+      
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/maria-alejandra-sanchez/">
             María Alejandra Sánchez
@@ -4364,7 +4440,8 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
       </li>
     
       
-      <li class="artist-item">
+      <li
+        class="artist-item">
         
           <a class="artist-link" href="/invitadxs/joyce-rivas/">
             Joyce Rivas
@@ -4487,19 +4564,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_a88c286f1f5ba652.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_fc6f456bac53d702.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_38a6c674e649db82.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_c4e484615c088e85.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_4208eecef5708c61.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_a88c286f1f5ba652.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_fc6f456bac53d702.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_38a6c674e649db82.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_c4e484615c088e85.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_4208eecef5708c61.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_36879315443aa2d2.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_bfb73855ea0c9016.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_e3943e34d1f5f063.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_82f976fe667a7a0.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01_hu_f3cebeb84873cee6.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_36879315443aa2d2.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_bfb73855ea0c9016.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_e3943e34d1f5f063.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_82f976fe667a7a0.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-1_hu_f3cebeb84873cee6.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-01.webp"
+              alt="galeria/exp_expo-mil-mnqsces-1.webp"
               loading="lazy"
               width="2400"
               height="1600" />
@@ -4580,19 +4657,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_edce8fbbb543be3.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_352047ff4c11aace.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_7e761053a5af8d0a.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_5d083b248f05f473.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_cec152df2ff5e7bf.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_edce8fbbb543be3.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_352047ff4c11aace.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_7e761053a5af8d0a.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_5d083b248f05f473.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_cec152df2ff5e7bf.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_36791d7441220363.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_fbc1b46de0ee4999.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_d693fdb9b1f1e967.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_19f3828244ffcaa3.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02_hu_8168e60aa03d3ba0.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_36791d7441220363.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_fbc1b46de0ee4999.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_d693fdb9b1f1e967.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_19f3828244ffcaa3.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-2_hu_8168e60aa03d3ba0.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-02.webp"
+              alt="galeria/exp_expo-mil-mnqsces-2.webp"
               loading="lazy"
               width="2400"
               height="1619" />
@@ -4673,19 +4750,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_73676969b3f653fa.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_ee9b7f73d9637991.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_c445fc1415fcac93.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_561a38e05a4c404a.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_13d2397c10f58ca.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_73676969b3f653fa.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_ee9b7f73d9637991.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_c445fc1415fcac93.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_561a38e05a4c404a.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_13d2397c10f58ca.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_7eeb1a6b670ba218.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_3425849617606bd2.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_e7962633f9ac4ba4.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_72f0ab6fd2a2fd86.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03_hu_64d6112ad042280e.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_7eeb1a6b670ba218.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_3425849617606bd2.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_e7962633f9ac4ba4.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_72f0ab6fd2a2fd86.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-3_hu_64d6112ad042280e.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-03.webp"
+              alt="galeria/exp_expo-mil-mnqsces-3.webp"
               loading="lazy"
               width="1600"
               height="1057" />
@@ -4766,19 +4843,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_81c933b9862359d3.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_c12ddc89e987b028.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_3b593515c025f528.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_4651908c2c0d60b8.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_bc6d620535cc396e.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_81c933b9862359d3.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_c12ddc89e987b028.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_3b593515c025f528.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_4651908c2c0d60b8.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_bc6d620535cc396e.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_4b2278fa5f97d92d.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_d0b27097d6bf4fbe.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_3f6217c074ca956c.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_5712a45c458a8804.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04_hu_9f52857aa5af4d1e.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_4b2278fa5f97d92d.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_d0b27097d6bf4fbe.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_3f6217c074ca956c.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_5712a45c458a8804.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-4_hu_9f52857aa5af4d1e.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-04.webp"
+              alt="galeria/exp_expo-mil-mnqsces-4.webp"
               loading="lazy"
               width="2400"
               height="2027" />
@@ -4859,19 +4936,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_e1921327d895d698.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_111e9e8a1a17b656.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_77ae03b16eadf729.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_2221b6ada2bf8d7d.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_55dbf8d01fab8cf6.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_e1921327d895d698.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_111e9e8a1a17b656.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_77ae03b16eadf729.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_2221b6ada2bf8d7d.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_55dbf8d01fab8cf6.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_db21e10f54a93962.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_8ed2153aff7b9f8c.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_72b46168b0ebfdad.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_622fc895da59d0af.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05_hu_a3b65322e98a469.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_db21e10f54a93962.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_8ed2153aff7b9f8c.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_72b46168b0ebfdad.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_622fc895da59d0af.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-5_hu_a3b65322e98a469.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-05.webp"
+              alt="galeria/exp_expo-mil-mnqsces-5.webp"
               loading="lazy"
               width="2400"
               height="1809" />
@@ -4952,19 +5029,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_c7f964f9ca29ccdb.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_daa0baf4e99aa68b.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_4c3da7e1eba389a4.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_95425caa1eda2235.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_c2047828c8aad1e6.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_c7f964f9ca29ccdb.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_daa0baf4e99aa68b.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_4c3da7e1eba389a4.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_95425caa1eda2235.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_c2047828c8aad1e6.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_7e59d696ad50e02b.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_7be11aaf8f16d037.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_19eddd04bea6fbf6.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_724400c66058f3c4.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06_hu_76487c26bb7f175e.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_7e59d696ad50e02b.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_7be11aaf8f16d037.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_19eddd04bea6fbf6.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_724400c66058f3c4.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-6_hu_76487c26bb7f175e.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-06.webp"
+              alt="galeria/exp_expo-mil-mnqsces-6.webp"
               loading="lazy"
               width="2400"
               height="1800" />
@@ -5045,19 +5122,19 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
             
             
               <source
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_80edbf06efcd5d06.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_2d05313706e08e71.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_18e7f23d6d659409.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_eeceec7810137f52.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_54e5dcf17bd76a99.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_80edbf06efcd5d06.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_2d05313706e08e71.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_18e7f23d6d659409.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_eeceec7810137f52.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_54e5dcf17bd76a99.webp 1280w"
                 sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
                 type="image/webp" />
             
 
             
             <img
-              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07.webp"
+              src="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7.webp"
               
-                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_6973e164b0a58961.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_ff87209d9255037c.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_246079b6686574d6.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_15094a7ad17dfbc8.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07_hu_f36c4f2dca184bd5.webp 1280w"
+                srcset="/programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_6973e164b0a58961.webp 320w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_ff87209d9255037c.webp 640w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_246079b6686574d6.webp 768w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_15094a7ad17dfbc8.webp 1024w, /programa-curatorial/expositivo-expandido/exposicion-mil-mundos-negros-que-se-conectan-entre-si/galeria/exp_expo-mil-mnqsces-7_hu_f36c4f2dca184bd5.webp 1280w"
               
               sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
-              alt="galeria/exp_exposicion-mil-mundos-negros-que-se-conectan-entre-si-07.webp"
+              alt="galeria/exp_expo-mil-mnqsces-7.webp"
               loading="lazy"
               width="1600"
               height="1066" />
@@ -5127,6 +5204,22 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
   </div>
 
   
+    <div class="as-sections-post-gallery"><section
+              class="pc-section-band pc-stage-desarrollo bg-dark-forest-green text-white">
+              <div class="pc-section-content"><h2 id="la-capilla-de-santa-bárbara-de-dominguillo">La Capilla de Santa Bárbara de Dominguillo</h2>
+<p>Ubicada a siete kilómetros del casco urbano de Santander de Quilichao, esta edificación fue declarada Monumento Nacional de Colombia en 1984, reconocimiento que la integra al acervo patrimonial y cultural del país. Su existencia está profundamente ligada a la historia de la explotación aurífera en la región durante el período colonial, cuando las minas reales dependían del trabajo forzado de la población africana esclavizada.</p>
+<p>En este contexto surgieron las llamadas “capillas doctrineras”, espacios destinados a la evangelización de los esclavos empleados en las cuadrillas mineras. La Capilla de Dominguillo, construida por la comunidad negra en 1857, destaca por ser la única de estas estructuras que se conserva con su arquitectura original. Su nombre proviene de los “dominguillos”, tiempo de descanso que los esclavizados destinaban los domingos para lavar ropa o mazamorrear en busca del oro con el que, gradualmente, podrían comprar su libertad.</p>
+<p>Hoy, la capilla constituye un símbolo vivo de resistencia y memoria afrocolombiana. En torno a ella habita la comunidad organizada en el Consejo Comunitario CURPAQ, que reconoce en este espacio no solo un legado religioso, sino también un testimonio de las luchas, las resistencias y las formas de construir comunidad que han marcado la historia del norte del Cauca.</p>
+<h3 id="bibliografía">Bibliografía:</h3>
+<ul>
+<li>Decreto Nacional 2860 de 1984 del Ministerio de Cultura de Colombia.</li>
+<li>&ldquo;Sitios de interés&rdquo;, en la Municipalidad de Santander de Quilichao.</li>
+<li>&ldquo;Restaurada Capilla de Dominguillo, patrimonio de Colombia&rdquo;, en Las2orillas, 2018.</li>
+<li>&ldquo;Capilla Santa Bárbara de Dominguillo&rdquo;, en lacapillamiescuela.wordpress.com.</li>
+</ul>
+</div>
+            </section></div>
+  
 
       </section>
     </main>
@@ -5151,11 +5244,17 @@ Los proyectos reunidos en la exposición no buscan representar la oscuridad, sin
         
           <ul>
             
-              <li>Fotos Generales Expo</li>
+              <li>Salón de la Excelencia, Santander de Quilichao</li>
+            
+              <li>Horarios: Miércoles a lunes (martes cerrado), 9:00 a.m. - 5:00 p.m.</li>
             
               <li>Astrid González</li>
             
               <li>Nolan Oswald Dennis</li>
+            
+              <li>Capilla Santa Bárbara de Dominguillo</li>
+            
+              <li>Horarios: Viernes a lunes (martes a jueves cerrado), 9:00 a.m. - 5:00 p.m.</li>
             
               <li>María Alejandra Sánchez</li>
             
