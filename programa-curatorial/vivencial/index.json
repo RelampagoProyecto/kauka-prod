@@ -73,18 +73,26 @@
     "nombre": "Parque principal de Guapi",
     "direccion": "Centro, Guapi"
   }},{
+  "title": "Amanecer, atardecer, anochecer: ensayo colectivo",
+  "url": "/programa-curatorial/editorial/amanecer-atardecer-anochecer/"},{
+  "title": "AMPIULʘ - espíritu del agua",
+  "url": "/programa-curatorial/editorial/espiritu-del-agua/"},{
   "title": "Ascender a lo hondo: dibujos, acuarelas, montañas y cosmogramas de Franz Xaver Faust",
   "url": "/programa-curatorial/editorial/exposicion-ascender-a-lo-hondo-dibujos-acuarelas-montanas-y-cosmogramas-de-franz-xaver-faust/",
   "lugar": {
     "nombre": "Casa de Franz Faust",
     "direccion": "Casa del artista, Popayán"
   }},{
+  "title": "Cosmogramas",
+  "url": "/programa-curatorial/editorial/cosmogramas/"},{
   "title": "El mundo al revés",
   "url": "/programa-curatorial/expositivo-expandido/exposicion-el-mundo-al-reves/",
   "lugar": {
     "nombre": "Casa Museo Guillermo León Valencia / Centro de Memoria Panteón de los Próceres",
     "direccion": "Centro histórico, Popayán"
   }},{
+  "title": "Esgrima - cimarronaje libertario",
+  "url": "/programa-curatorial/editorial/esgrima-cimarronaje-libertario/"},{
   "title": "Guardias del fuego compartido",
   "url": "/programa-curatorial/expositivo-expandido/exposicion-guardias-del-fuego-compartido/",
   "lugar": {
@@ -140,7 +148,9 @@
     "direccion": null
   }},{
   "title": "Polisemias rurales - Narrativas corporales, sexuales y de género en el Cauca",
-  "url": "/programa-curatorial/editorial/narrativas-maricas/"},{
+  "url": "/programa-curatorial/editorial/polisemias-rurales/"},{
+  "title": "Recetario de papachina",
+  "url": "/programa-curatorial/editorial/recetario-de-papachina/"},{
   "title": "Residencia Artística y Hogar Minga Prácticas Decoloniales",
   "url": "/programa-curatorial/residencias/residencia-popayork-residencia-artistica-y-hogar-minga-practicas-decoloniales/",
   "lugar": {
@@ -183,6 +193,8 @@
     "nombre": "Cancha del Barrio las Dos Aguas",
     "direccion": "Barrio las Dos Aguas, Puerto Tejada"
   }},{
+  "title": "Yanapaqkuna Yanakuna Anacona - Gente de la primera humanidad",
+  "url": "/programa-curatorial/editorial/yanapaqkuna-yanakuna-anacona/"},{
   "title": "Residencia PIYAPMƟSIK - Casa del Sueño",
   "url": "/programa-curatorial/residencias/residencia-piyapmosik-casa-del-sueno/",
   "lugar": {
